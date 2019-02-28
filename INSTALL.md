@@ -18,12 +18,20 @@ $ git clone https://github.com/pjreddie/darknet
 $ cd darknet
 $ make
 
+# In the darknet directory
+$ wget https://pjreddie.com/media/files/yolov3.weights
+
 # If make command worked skip these steps
 $ sudo apt update
 $ sudo apt install build-essential
 	#If build essentials doesnt install everything like it did for me in ubuntu
 	$ sudo apt intsall gcc
 	$ sudo apt install g++
+
+# Test it out without gpu
+$ ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
+
+                              # CONTINUE ONLY IF THE ABOVE WORKS"
 
 # Download cuda toolkit as a .run file, cuDNN as a .tgz compressed file
 Toolkit: "https://developer.nvidia.com/cuda-downloads"
